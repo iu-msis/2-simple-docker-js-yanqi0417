@@ -25,7 +25,7 @@
             <a class="nav-link" href="table.html">Books</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="aboutme.html">About Me</a>
+            <a class="nav-link" href="profile.html">About Me</a>
           </li>
         </ul>
       </div>
@@ -36,21 +36,26 @@
         <div class="col myLeftCol">
 
         </div>
-        <div class="col-6">
+        <div id="userProfile">
 
           <h1>About Me</h1>
           <br>
-          <p>Name: Tom Perry</p>
-          <p>Country: Japan</P>
-          <p>Birthday Date: 08/81/1697</P>
-          <p>Age: 333</P>
-          <a href="mailto:falseyahoo@yahoo.com">falseyahoo@yahoo.com</a>
-            <br>
-
-          <a href="https://cdna.artstation.com/p/assets/images/images/021/115/556/large/kushal-kush-hex-color.jpg?1570458842"><br><img src="https://cdna.artstation.com/p/assets/images/images/021/115/556/large/kushal-kush-hex-color.jpg?1570458842" alt="logo"
-          ></a>
-          <!-- Picture Cited From https://www.artstation.com/artwork/BmLRGm -->
           <br>
+          <h4>Name : {{userName}}</h4>
+          <br>
+          <h4>Email : <a v-bind:href="'mailto:'+ userEmail">{{userEmail}}</a></h4>
+          <br>
+          <h4>Date of Birth : {{formatDate(userDate)}}</h4>
+          <br>
+          <h4>Age : {{userAge}}</h4>
+          <br>
+          <h4>Picture : <a v-bind:href = "userImgLarge">
+            <img v-bind:src="userImgThumb">
+          </a>
+          </h4>
+          <br>
+          <h4>Nationality : {{userNat}}</h4>
+
 
           <br>
         </div>
@@ -68,5 +73,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
+    <script src="js/profile.app.js"></script>
+
   </body>
 </html>
