@@ -14,11 +14,29 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <div id='userProfile'>
-      <h4>Name - {{userName}}</h4>
-      <h4>Email - {{userEmail}}</h4>
-      <a v-bind:href="userImgLarge">
+    <div id="userProfile">
+
+      <h1>About Me</h1>
+      <br>
+      <br>
+      <h4>Name : {{userName}}</h4>
+      <br>
+      <h4>Email : <a v-bind:href="'mailto:'+ userEmail">{{userEmail}}</a></h4>
+      <br>
+      <h4>Date of Birth : {{formatDate(userDate)}}</h4>
+      <br>
+      <h4>Age : {{userAge}}</h4>
+      <br>
+      <h4>Picture : <a v-bind:href = "userImgLarge">
         <img v-bind:src="userImgThumb">
+      </a>
+      </h4>
+      <br>
+      <h4>Nationality : {{userNat}}</h4>
+
+
+      <br>
+    </div>
       </a>
 
     <!-- END content -->
