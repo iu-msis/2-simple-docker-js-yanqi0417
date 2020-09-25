@@ -29,7 +29,7 @@ var app = new Vue({
         this.userImgLarge = userData.picture.large;
         this.userImgThumb = userData.picture.thumbnail;
       })
-      
+
       .catch((error)=>{
         console.error('Error:' ,error);
         fetch('./JSON/randomuser.me-sample.json')
