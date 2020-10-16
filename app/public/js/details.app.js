@@ -22,4 +22,33 @@ waitingApp = new Vue ({
         });
 
       }
-    }
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+created(){
+  this.fetchUser();
+
+}
+});
