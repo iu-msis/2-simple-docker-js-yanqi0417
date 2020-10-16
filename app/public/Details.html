@@ -8,9 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- my custom CSS goes here -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
-
+<link rel="stylesheet" href="css/style.css" />
     <title>Hello, world!</title>
   </head>
   <body>
@@ -37,44 +35,27 @@
         </ul>
       </div>
     </nav>
-    <div id="userProfile">
 
-      <h1>About Me</h1>
-      <br>
-      <br>
-      <h4>Name : {{userName}}</h4>
-      <br>
-      <h4>Email : <a v-bind:href="'mailto:'+ userEmail">{{userEmail}}</a></h4>
-      <br>
-      <h4>Date of Birth : {{formatDate(userDate)}}</h4>
-      <br>
-      <h4>Age : {{userAge}}</h4>
-      <br>
-      <h4>Picture : <a v-bind:href = "userImgLarge">
-        <img v-bind:src="userImgThumb">
-      </a>
-      </h4>
-      <br>
-      <h4>Nationality : {{userNat}}</h4>
+    <div class="container-fluid">
+      <div class="row" id="randomUsersId">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+          <span class="lastName">User Id: {{ user.userId }}</span>, <br/>
+          <span class="lastName">Name: {{ user.firstName }}</span>,
+          <span class="firstName">{{ user.lastName }}</span>
 
-
-      <br>
-    </div>
-      </a>
-
+        </div>
+    <br/>
     <!-- END content -->
 
     <!-- Footer? Insert here -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
-    <script src="js/profile.app.js"></script>
+    <script src="js/profile1.app.js"></script>
   </body>
 </html>
