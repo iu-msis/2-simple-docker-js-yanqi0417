@@ -22,7 +22,7 @@ waitingApp = new Vue ({
 createComment(){
   fetch('api/comments/insertcomments.php', {
       method: 'POST',
-    body: JSON.stringify(this.newcomment),
+    body: JSON.stringify(this.newcomments),
   headers: {
     "Content-Type": "application/json; charset=utf-8"
   }
@@ -31,15 +31,15 @@ createComment(){
   .then( json => {
     console.log("Returned from post:", json);
     this.comments.push(json[0]);
-    this.newcomment = this.newUserData();
+    this.newcomment = this.newcommentData();
   });
   console.log("creating (POSTing)...!");
-  console.log(this.newcomment);
+  console.log(this.newcomments);
 },
 newCommentData() {
   return {
     id: '',
-    commenttext: ''
+    commentText: ''
    }
   }
 },

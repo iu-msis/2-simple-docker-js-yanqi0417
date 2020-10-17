@@ -65,21 +65,19 @@
     <div class="row">
       <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
         <div class="comments" v-for="comment in comments">
-        <span class="commentid">Comment Id {{ comment.id }}</span>, <br/>
-        <span class="comment">Comment: {{ comment.commentText}}</span>,
+        <span class="commenttext">Comment: {{ comment.commentText}}</span>,
 
       </div>
   <br/>
 
 
-  <form v-on:submit.prevent="createComment()">
+  <form method = "post" v-on:submit.prevent="createComment()">
     <div class="comments">
-      <label for="commentid">Comment Id</label>
-      <input type="text" v-model="newcomments.id" class="form-control" id="commentid" placeholder="Comment ID">
       <label for="commenttext">Comment</label>
-      <input type="text" v-model="newcomments.commenttext" class="form-control" id="commenttext" placeholder="comment">
+      <input type="text" v-model="newcomments.commentText" class="form-control" id="commenttext" placeholder="comment">
     </div><br/>
-    <input type="submit" value="Create Comment" class="button">
+    <input  type="submit" value="Create Comment" class="button">
+
   </form>
     </div>
   </div>

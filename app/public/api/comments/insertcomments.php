@@ -6,12 +6,11 @@ $db = DbConnection::getConnection();
 
 
 $stmt = $db->prepare(
-  'INSERT INTO comments (id, commentText)
-  VALUES (?, ?)'
+  'INSERT INTO comments (commentText)
+  VALUES (?)'
 );
 
 $stmt->execute([
-  $_POST['id'],
   $_POST['commentText'],
 ]);
 
