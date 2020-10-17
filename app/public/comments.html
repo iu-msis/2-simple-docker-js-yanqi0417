@@ -30,14 +30,14 @@
 
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Details.html">Details</a>
+            <a class="nav-link" href="comments.html">Comments</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <div class="container-fluid">
-      <div class="row" id="randomUsersId">
+    <!-- <div id="randomUsersId" class="container-fluid">
+      <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
           <div class="users" v-for="user in users">
           <span class="lastName">User Id: {{ user.userId }}</span>, <br/>
@@ -46,6 +46,45 @@
 
         </div>
     <br/>
+
+
+    <form v-on:submit.prevent="createUser()">
+      <div class="users">
+        <label for="userFirstName">First Name</label>
+        <input type="text" v-model="newUser.firstName" class="form-control" id="userFirstName" placeholder="First Name">
+        <label for="userLastName">Last Name</label>
+        <input type="text" v-model="newUser.lastName" class="form-control" id="userLastName" placeholder="Last Name">
+      </div><br/>
+      <input type="submit" value="Create User" class="button">
+    </form>
+      </div>
+    </div>
+  </div> -->
+
+  <div id="randomComments" class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+        <div class="comments" v-for="comment in comments">
+        <span class="commentid">Comment Id {{ comment.id }}</span>, <br/>
+        <span class="comment">Comment: {{ comment.commentText}}</span>,
+
+      </div>
+  <br/>
+
+
+  <form v-on:submit.prevent="createComment()">
+    <div class="comments">
+      <label for="commentid">Comment Id</label>
+      <input type="text" v-model="newcomments.id" class="form-control" id="commentid" placeholder="Comment ID">
+      <label for="commenttext">Comment</label>
+      <input type="text" v-model="newcomments.commenttext" class="form-control" id="commenttext" placeholder="comment">
+    </div><br/>
+    <input type="submit" value="Create Comment" class="button">
+  </form>
+    </div>
+  </div>
+</div>
+
     <!-- END content -->
 
     <!-- Footer? Insert here -->
@@ -57,6 +96,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
-    <script src="js/profile1.app.js"></script>
+    <script src="js/comments.app.js"></script>
+    <script src="js/tablesort.min.js"></script>
   </body>
 </html>

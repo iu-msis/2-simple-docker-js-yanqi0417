@@ -6,14 +6,13 @@ $db = DbConnection::getConnection();
 
 
 $stmt = $db->prepare(
-  'INSERT INTO Random_User (UserId, firstName, lastName)
-  VALUES (?, ?, ?)'
+  'INSERT INTO comments (id, commentText)
+  VALUES (?, ?)'
 );
 
 $stmt->execute([
-  $_POST['userId'],
-  $_POST['firstName'],
-  $_POST['lastName'],
+  $_POST['id'],
+  $_POST['commentText'],
 ]);
 
 
@@ -23,4 +22,4 @@ $stmt->execute([
 
 
 header('HTTP/1.1 303 See Other');
-header('Location: ../users/?userId=' . $_POST['userId']);
+header('Location: ../users/');
