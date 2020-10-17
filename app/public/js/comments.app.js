@@ -12,7 +12,7 @@ waitingApp = new Vue ({
   },
     methods:{
       fetchUser(){
-        fetch('api/Comments/')
+        fetch('api/comments/')
         .then(response => response.json())
         .then(json => {
           this.comments=json;

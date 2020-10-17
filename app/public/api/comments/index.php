@@ -6,12 +6,12 @@ require 'common.php';
 $db = DbConnection::getConnection();
 
 // Step 2: Create & run the query
-$sql = 'SELECT * FROM Random_User';
+$sql = 'SELECT * FROM comments';
 $vars = [];
 
-if (isset($_GET['userId'])) {
-  $sql = 'SELECT * FROM Random_User WHERE userId = ?';
-  $vars = [ $_GET['userId'] ];
+if (isset($_GET['id'])) {
+  $sql = 'SELECT * FROM comments WHERE id = ?';
+  $vars = [ $_GET['id'] ];
 }
 
 $stmt = $db->prepare($sql);
