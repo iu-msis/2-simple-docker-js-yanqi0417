@@ -11,6 +11,7 @@ $stmt = $db->prepare(
 );
 
 $stmt->execute([
+
   $_POST['commentText'],
 ]);
 
@@ -18,7 +19,7 @@ $stmt->execute([
 
 
 
-
+// $id = $db->lastInsertId();  // https://www.php.net/manual/en/pdo.lastinsertid.php
 
 header('HTTP/1.1 303 See Other');
-header('Location: ../users/');
+header('Location: ../comments/');

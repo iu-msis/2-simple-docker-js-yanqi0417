@@ -31,7 +31,7 @@ createComment(){
   .then( json => {
     console.log("Returned from post:", json);
     this.comments.push(json[0]);
-    this.newcomment = this.newcommentData();
+    this.newcomment = this.newCommentData();
   });
   console.log("creating (POSTing)...!");
   console.log(this.newcomments);
