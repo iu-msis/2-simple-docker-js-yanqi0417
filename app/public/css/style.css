@@ -12,11 +12,34 @@ h1{
     padding-bottom:0;
 }
 nav{
-    background-color:navy;
+    background-color:Darkred;
     color:white;
     font-weight: bold;
     padding: 14px;
 
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th
+{
+  border: 1px solid red;
+  text-align: left;
+  background-color: Darkred;
+  color: white;
+}
+
+td {
+  border: 1px solid red;
+  text-align: left;
+  font-style: italic;
+}
+
+label {
+color: #B4886B;
+font-weight: bold;
 }
 
 img {
@@ -37,6 +60,16 @@ a{
 {
   color: white;
   text-decoration-style: solid;
+}
+.button
+{
+  background-color: Darkred;
+  border: 2px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
 }
 /* Table Sort */
 th[role=columnheader]:not(.no-sort) {
@@ -71,11 +104,4 @@ th[aria-sort]:not(.no-sort):after {
 th[role=columnheader]:not(.no-sort):hover:after {
 	visibility: visible;
 	opacity: 1;
-}
-table {
-  border-collapse: collapse;
-}
-
-table, th, td {
-  border: 1px solid red;
 }
