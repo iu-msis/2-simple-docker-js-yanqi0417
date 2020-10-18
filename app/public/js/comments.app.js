@@ -10,6 +10,7 @@ var App = new Vue ({
     commentText: ''
   }
   },
+
     methods:{
       fetchUser(){
         fetch('api/comments/')
@@ -20,7 +21,7 @@ var App = new Vue ({
         });
     },
 
-createComment(){
+createComment( ){
   fetch('api/comments/insertcomments.php', {
       method: 'POST',
     body: JSON.stringify(this.newcomments),
@@ -32,8 +33,9 @@ createComment(){
   .then( json => {
     console.log("Returned from post:", json);
     this.comments = json;
-    this.newcomment = this.newCommentData();
+    this.newcomments = this.newCommentData();
   });
+
   console.log("creating (POSTing)...!");
   console.log(this.newcomments);
 },
