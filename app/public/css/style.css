@@ -72,3 +72,10 @@ th[role=columnheader]:not(.no-sort):hover:after {
 	visibility: visible;
 	opacity: 1;
 }
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid red;
+}

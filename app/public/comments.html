@@ -36,6 +36,8 @@
       </div>
     </nav>
 
+
+
     <!-- <div id="randomUsersId" class="container-fluid">
       <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
@@ -60,23 +62,47 @@
       </div>
     </div>
   </div> -->
+<div id="randomComments" class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+  <table id="commentTable task-table" class="table table-bordered table-striped table-hover">
+            <thead>
+            <tr>
+                <br>
+            </tr>
+                <th class="th1"> ID </th>
+                <th class="th1"> Comment </th>
+            </thead>
+            <tbody id="commentTableBody">
+                <tr div class="comments" v-for="comment in comments">
+                    <td>{{comment.id}}</td>
+                    <td>{{comment.commentText}}</td>
+                </tr>
+            </tbody>
 
-  <div id="randomComments" class="container-fluid">
+        </table>
+    </div>
+  </div>
+
+  <!-- <div id="randomComments" class="container-fluid">
     <div class="row">
       <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
         <div class="comments" v-for="comment in comments">
         <span class="commenttext">Comment: {{ comment.commentText}}</span>
 
       </div>
-  <br/>
+  <br/> -->
 
 
   <form method="post" v-on:submit.prevent="createComment()">
     <div class="comments">
-      <label for="commenttext">Comment</label>
+      <label for="id">Submit New id </label>
+      <input type="text" v-model="newcomments.id" class="form-control" id="commentid" placeholder="comment">
+
+      <label for="commenttext">Submit New Comment </label>
       <input type="text" v-model="newcomments.commentText" class="form-control" id="commentText" placeholder="comment">
     </div><br/>
-    <input type="submit" value="Create Comment" class="button">
+    <input type="submit" value="Create New Comment" class="button" id="submitNewComment">
 
   </form>
     </div>

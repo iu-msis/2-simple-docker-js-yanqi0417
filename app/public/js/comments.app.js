@@ -1,4 +1,4 @@
-waitingApp = new Vue ({
+var App = new Vue ({
   el: '#randomComments',
   data: {
     comments: [{
@@ -19,6 +19,7 @@ waitingApp = new Vue ({
           console.log(this.comments);
         });
     },
+
 createComment(){
   fetch('api/comments/insertcomments.php', {
       method: 'POST',
@@ -30,7 +31,7 @@ createComment(){
   .then( response => response.json() )
   .then( json => {
     console.log("Returned from post:", json);
-    this.comments.push(json[0]);
+    this.comments = json;
     this.newcomment = this.newCommentData();
   });
   console.log("creating (POSTing)...!");
