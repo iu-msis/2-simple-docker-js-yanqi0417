@@ -22,7 +22,7 @@ var App = new Vue ({
     },
 
 createComment( ){
-  fetch('api/comments/insertcomments.php', {
+  fetch('api/comments/create.php', {
       method: 'POST',
     body: JSON.stringify(this.newcomments),
   headers: {
